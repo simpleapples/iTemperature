@@ -43,6 +43,7 @@
                 NSDictionary *addressDic = placeMark.addressDictionary;
                 NSString *city = [addressDic objectForKey:@"City"];
                 [GlobalHolder sharedSingleton].city = city;
+                [[GlobalHolder sharedSingleton] backupToLocal];
             }
         }];
         [[WeatherService sharedSingleton] getCurrentTemperatureByLatitue:location.coordinate.latitude longitude:location.coordinate.longitude block:^(BOOL success, CGFloat temperature) {

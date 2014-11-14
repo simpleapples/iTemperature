@@ -40,4 +40,15 @@
     return self;
 }
 
+- (void)backupToLocal {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:self.city forKey:@"city"];
+    [userDefaults synchronize];
+}
+
+- (void)recoverFromLocal {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    self.city = [userDefaults objectForKey:@"city"];
+}
+
 @end

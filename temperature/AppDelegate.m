@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GlobalHolder.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     application.statusBarHidden = NO;
+    [[GlobalHolder sharedSingleton] recoverFromLocal];
     return YES;
 }
 

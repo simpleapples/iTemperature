@@ -59,6 +59,7 @@
                 NSDictionary *addressDic = placeMark.addressDictionary;
                 NSString *city = [addressDic objectForKey:@"City"];
                 [GlobalHolder sharedSingleton].city = city;
+                [[GlobalHolder sharedSingleton] backupToLocal];
                 self.locationLabel.text = city;
                 self.locationResultLabel.text = @"定位完成";
             } else {

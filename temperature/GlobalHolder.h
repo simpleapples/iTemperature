@@ -19,4 +19,7 @@
 
 + (GlobalHolder *)sharedSingleton;
 
+- (void)backupToLocal;
+- (void)recoverFromLocal;
+
 @end
