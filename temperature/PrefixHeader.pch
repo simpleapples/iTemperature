@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  temperature
+//
+//  Created by Zzy on 11/14/14.
+//  Copyright (c) 2014 zangzhiya. All rights reserved.
+//
+
+#ifndef temperature_PrefixHeader_pch
+#define temperature_PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+
+#endif
